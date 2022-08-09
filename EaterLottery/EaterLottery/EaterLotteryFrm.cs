@@ -51,7 +51,7 @@ namespace EaterLottery
         private void btn_Click(object sender, EventArgs e)
         {
             Random r = new Random();
-            string[] stores = GetAppSetting("store").Split(',').OrderBy(x => r.Next()).ToArray();//.OrderBy();            
+            string[] stores = GetAppSetting("store").Split(',').OrderBy(x => r.Next()).ToArray();
             string store; //今天抽的
             List<string> oldStores = GetAppSetting("oldStore").Split(',', StringSplitOptions.RemoveEmptyEntries).ToList(); //昨天抽的
             do
